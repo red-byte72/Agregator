@@ -1,7 +1,16 @@
 package com.example.user.agregator;
 
-/**
- * Created by User on 02.09.2015.
- */
 public class BaseResult {
+
+    private int errorCode;
+    private String errorMessage;
+
+    public boolean isSuccess() {
+        return errorCode == 0;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
 }

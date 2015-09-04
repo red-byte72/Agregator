@@ -1,7 +1,11 @@
 package com.example.user.agregator;
 
-/**
- * Created by User on 02.09.2015.
- */
-public class UserResult {
+public class UserResult extends BaseResult {
+
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
 }

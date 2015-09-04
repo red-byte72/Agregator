@@ -7,10 +7,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.user.agregator.PersonalProfileActivity">
     <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/image_about"
+        android:id="@+id/image_person"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_below="PersonImg"
         />
     <TextView
         android:layout_width="wrap_content"
