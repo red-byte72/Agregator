@@ -1,45 +1,58 @@
 package com.example.user.agregator;
 
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import org.json.JSONObject;
-
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 public class StartActivity extends AppCompatActivity {
 
     final String base_url = "http://dev.msp-tl.ru:8080/msp-magw-ws/mobile/index";
+    EditText evPassword = null;
+    EditText evTelNumber = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        final TextView tvEdit = (TextView) findViewById(R.id.editText);
+        evPassword = (EditText) findViewById(R.id.editPassStart);
+        evTelNumber = (EditText) findViewById(R.id.editTelephoneNumberStart);
+        evTelNumber.setSelection(2);
+        evPassword.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    if (evPassword.getText().toString().equals("qwe123"))
+                        jmpCatalogGoods();
+                    else showToastMessage("Неверный пароль");
+                }
+
+                return false;
+            }
+        });
+
+        final TextView tvEdit = (TextView) findViewById(R.id.editTelephoneNumberStart);
         Map<String,String> param = new HashMap<>();
         param.put("action", "accountCreateRequest");
         param.put("msisdn", "89604486288");
 /*        Log.d("7777", key.get("action"));
         Log.d("7777",key.get("msisdn"));*/
+
         final GsonRequest<UserResult> loginRequest = new GsonRequest<>(this, base_url, param, UserResult.class,
                 new Response.Listener<UserResult>() {
                     @Override
@@ -52,8 +65,8 @@ public class StartActivity extends AppCompatActivity {
                 //tvEdit.setText("Error: " + error.getMessage());
                 error.printStackTrace();
                 Log.d("7777", "err " + error.getMessage());
-                Log.d("7777", "code " + error.networkResponse.statusCode);
-                Log.d("7777","headers "+error.networkResponse.headers);
+/*                Log.d("7777", "code " + error.networkResponse.statusCode);
+                Log.d("7777", "headers "+error.networkResponse.headers);*/
             }
         });
 
@@ -82,7 +95,19 @@ public class StartActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void onClickEnterButton(View view) {
+/*        Intent i = new Intent(StartActivity.this, MultiTrackerActivity.class);
+        startActivity(i);      */
+        // evPassword = (EditText) findViewById(R.id.editPassword);
+        if (evPassword.getText().toString().equals("qwe123")){
+            jmpCatalogGoods();
+
+        }
+        else showToastMessage("Неверный пароль");
+
+
+
 /*        final TextView tvResponse = (TextView) findViewById(R.id.editText);
 
 
@@ -108,11 +133,20 @@ public class StartActivity extends AppCompatActivity {
 
 
     public void onClickSmsButton(View view) {
+        Map<Integer,String> dic = new HashMap<>();
+        for(int i = 0; i < 10; i++)
+            dic.put(i,"Lenin191"+i);
+        for(int i = 0; i < 10; i++)
+            if(dic.get(i).equals("Lenin1917"))
+                Log.d("7777","423 / 3 = " + (423)/3);
+
     }
 
     public void onClickRegistry(View view) {
         Intent i = new Intent(StartActivity.this, RegistrationActivity.class);
         startActivity(i);
+/*        Intent i = new Intent(StartActivity.this, TutorialActivity.class);
+        startActivity(i);*/
     }
 
 //
@@ -150,5 +184,16 @@ public class StartActivity extends AppCompatActivity {
 
 
         return builtUri.toString();
+    }
+    void jmpCatalogGoods(){
+        evPassword.setText("");
+        evTelNumber.setText("");
+        Intent i = new Intent(StartActivity.this, ListOfShoppingListsActivity.class);
+        startActivity(i);
+    }
+    void showToastMessage(String text){
+        Toast toast = Toast.makeText(getApplicationContext(),
+                text, Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

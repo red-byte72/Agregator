@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_name"
-        android:id="@+id/textView6"
+        android:id="@+id/textNameReg2"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -19,10 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:id="@+id/editText6"
-        android:layout_below="@+id/textView6"
+        android:id="@+id/editNameReg2"
+        android:layout_below="@+id/textNameReg2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -30,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_password"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/editText6"
+        android:id="@+id/textPassReg2"
+        android:layout_below="@+id/editNameReg2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -40,8 +39,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText7"
-        android:layout_below="@+id/textView7"
+        android:id="@+id/editPassReg2"
+        android:layout_below="@+id/textPassReg2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -49,28 +48,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_code"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/editText7"
+        android:id="@+id/textCodeReg2"
+        android:layout_below="@+id/editPassReg2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText8"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText7"
-        android:layout_alignEnd="@+id/editText7" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_ok"
-        android:id="@+id/button5"
+        android:id="@+id/btnOkReg2"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="onClickOk" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editCodeReg2"
+        android:layout_below="@+id/textCodeReg2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 </RelativeLayout>

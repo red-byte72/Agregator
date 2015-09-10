@@ -54,5 +54,7 @@
     <string name="title_activity_rating">RatingActivity</string>
     <string name="title_activity_rating_product">RatingProductActivity</string>
     <string name="title_activity_analytics">AnalyticsActivity</string>
-
+    <string name="permission_camera_rationale">Необходим доступ к камере</string>
+    <string name="no_camera_permission">Невозможно запустить сканирование штрих-кодов, нет доступа к камере.</string>
+    <string name="txt_plus_seven">+7</string>
 </resources>

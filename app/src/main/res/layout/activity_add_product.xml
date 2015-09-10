@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_product_name"
-        android:id="@+id/textView23"
+        android:id="@+id/textProductNameAddProduct"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -25,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_creator"
-        android:id="@+id/textView24"
-        android:layout_below="@+id/editText12"
+        android:id="@+id/textCreatorAddProduct"
+        android:layout_below="@+id/editProductNameAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_category"
-        android:id="@+id/textView25"
+        android:id="@+id/textCategoryAddProduct"
         android:layout_below="@+id/image_about"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -42,8 +42,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText12"
-        android:layout_below="@+id/textView23"
+        android:id="@+id/editProductNameAddProduct"
+        android:layout_below="@+id/textProductNameAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/image_about"
@@ -52,8 +52,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText13"
-        android:layout_below="@+id/textView24"
+        android:id="@+id/editCreatorAddProduct"
+        android:layout_below="@+id/textCreatorAddProduct"
         android:layout_alignRight="@+id/image_about"
         android:layout_alignEnd="@+id/image_about"
         android:layout_alignParentLeft="true"
@@ -62,8 +62,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText14"
-        android:layout_below="@+id/textView25"
+        android:id="@+id/editCategoryAddProduct"
+        android:layout_below="@+id/textCategoryAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/image_about"
@@ -73,16 +73,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_unit_of_measurement"
-        android:id="@+id/textView26"
-        android:layout_below="@+id/editText14"
+        android:id="@+id/textUnitAddProduct"
+        android:layout_below="@+id/editCategoryAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText15"
-        android:layout_below="@+id/textView26"
+        android:id="@+id/editUnitAddProduct"
+        android:layout_below="@+id/textUnitAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -92,8 +92,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_load_photo"
-        android:id="@+id/button14"
-        android:layout_below="@+id/editText15"
+        android:id="@+id/btnLoadPhotoAddProduct"
+        android:layout_below="@+id/editUnitAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -101,10 +101,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_send"
-        android:id="@+id/button15"
-        android:layout_below="@+id/button14"
+        android:id="@+id/btnSendAddProduct"
+        android:layout_below="@+id/btnLoadPhotoAddProduct"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button14"
-        android:layout_alignEnd="@+id/button14" />
+        android:layout_alignRight="@+id/btnLoadPhotoAddProduct"
+        android:layout_alignEnd="@+id/btnLoadPhotoAddProduct" />
 </RelativeLayout>

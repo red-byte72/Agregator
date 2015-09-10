@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/enter_phone_number"
-        android:id="@+id/textView"
+        android:id="@+id/textPhoneStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
@@ -18,21 +18,24 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView"
+        android:id="@+id/editTelephoneNumberStart"
+        android:layout_below="@+id/textPhoneStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:editable="false"
         android:elegantTextHeight="false"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignRight="@+id/textPhoneStart"
+        android:layout_alignEnd="@+id/textPhoneStart"
+        android:inputType="phone"
+        android:maxLength="12"
+        android:text="@string/txt_plus_seven" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_password"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editText"
+        android:id="@+id/textPassStart"
+        android:layout_below="@+id/editTelephoneNumberStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -41,32 +44,33 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/editPassStart"
+        android:layout_below="@+id/textPassStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignRight="@+id/editTelephoneNumberStart"
+        android:layout_alignEnd="@+id/editTelephoneNumberStart"
+        android:password="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/registry"
-        android:id="@+id/button"
+        android:id="@+id/btnRegStart"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="onClickRegistry"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignRight="@+id/btnGetPassStart"
+        android:layout_alignEnd="@+id/btnGetPassStart" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send_sms"
-        android:id="@+id/button2"
+        android:id="@+id/btnGetPassStart"
         android:onClick="onClickSmsButton"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/btnRegStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -74,12 +78,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_app"
-        android:id="@+id/button3"
+        android:id="@+id/btnEnterStart"
         android:onClick="onClickEnterButton"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/btnGetPassStart"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignRight="@+id/btnGetPassStart"
+        android:layout_alignEnd="@+id/btnGetPassStart" />
 
 </RelativeLayout>

@@ -16,17 +16,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_product_name"
-        android:id="@+id/textView10"
+        android:id="@+id/textNameProdInfo"
         android:layout_marginTop="38dp"
-        android:layout_below="@+id/textView11"
-        android:layout_alignLeft="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
+        android:layout_below="@+id/textCategoryProdInfo"
+        android:layout_alignLeft="@+id/textCategoryProdInfo"
+        android:layout_alignStart="@+id/textCategoryProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_category"
-        android:id="@+id/textView11"
+        android:id="@+id/textCategoryProdInfo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -34,102 +34,102 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_unit_of_measurement"
-        android:id="@+id/textView12"
-        android:layout_below="@+id/textView10"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10" />
+        android:id="@+id/textUnitProdInfo"
+        android:layout_below="@+id/textNameProdInfo"
+        android:layout_alignLeft="@+id/textNameProdInfo"
+        android:layout_alignStart="@+id/textNameProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_composition"
-        android:id="@+id/textView13"
-        android:layout_below="@+id/textView12"
-        android:layout_alignLeft="@+id/textView12"
-        android:layout_alignStart="@+id/textView12" />
+        android:id="@+id/textCompositProdInfo"
+        android:layout_below="@+id/textUnitProdInfo"
+        android:layout_alignLeft="@+id/textUnitProdInfo"
+        android:layout_alignStart="@+id/textUnitProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_gmo"
-        android:id="@+id/textView14"
-        android:layout_below="@+id/textView13"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13" />
+        android:id="@+id/textGmoProdInfo"
+        android:layout_below="@+id/textCompositProdInfo"
+        android:layout_alignLeft="@+id/textCompositProdInfo"
+        android:layout_alignStart="@+id/textCompositProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_caloric"
-        android:id="@+id/textView15"
-        android:layout_below="@+id/textView14"
-        android:layout_alignLeft="@+id/textView14"
-        android:layout_alignStart="@+id/textView14" />
+        android:id="@+id/textCaloricProdInfo"
+        android:layout_below="@+id/textGmoProdInfo"
+        android:layout_alignLeft="@+id/textGmoProdInfo"
+        android:layout_alignStart="@+id/textGmoProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_natural"
-        android:id="@+id/textView16"
-        android:layout_below="@+id/textView15"
-        android:layout_alignLeft="@+id/textView15"
-        android:layout_alignStart="@+id/textView15" />
+        android:id="@+id/textNaturalProdInfo"
+        android:layout_below="@+id/textCaloricProdInfo"
+        android:layout_alignLeft="@+id/textCaloricProdInfo"
+        android:layout_alignStart="@+id/textCaloricProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_assessment"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView16"
-        android:layout_alignLeft="@+id/textView16"
-        android:layout_alignStart="@+id/textView16" />
+        android:id="@+id/textAssessmentProdInfo"
+        android:layout_below="@+id/textNaturalProdInfo"
+        android:layout_alignLeft="@+id/textNaturalProdInfo"
+        android:layout_alignStart="@+id/textNaturalProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_midle_assessment"
-        android:id="@+id/textView18"
-        android:layout_below="@+id/textView17"
-        android:layout_alignLeft="@+id/textView17"
-        android:layout_alignStart="@+id/textView17" />
+        android:id="@+id/textMidleAProdInfo"
+        android:layout_below="@+id/textAssessmentProdInfo"
+        android:layout_alignLeft="@+id/textAssessmentProdInfo"
+        android:layout_alignStart="@+id/textAssessmentProdInfo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_recall"
-        android:id="@+id/textView19"
-        android:layout_below="@+id/textView18"
-        android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18" />
+        android:id="@+id/textRecallProdInfo"
+        android:layout_below="@+id/textMidleAProdInfo"
+        android:layout_alignLeft="@+id/textMidleAProdInfo"
+        android:layout_alignStart="@+id/textMidleAProdInfo" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_price"
-        android:id="@+id/button8"
+        android:id="@+id/btnPrice"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button10"
-        android:layout_alignEnd="@+id/button10" />
+        android:layout_alignRight="@+id/btnAddProdIndo"
+        android:layout_alignEnd="@+id/btnAddProdIndo" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_del_product"
-        android:id="@+id/button9"
-        android:layout_below="@+id/button10"
+        android:id="@+id/btnDelProdInfo"
+        android:layout_below="@+id/btnAddProdIndo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button10"
-        android:layout_alignEnd="@+id/button10" />
+        android:layout_alignRight="@+id/btnAddProdIndo"
+        android:layout_alignEnd="@+id/btnAddProdIndo" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_add_product"
-        android:id="@+id/button10"
-        android:layout_below="@+id/button8"
+        android:id="@+id/btnAddProdIndo"
+        android:layout_below="@+id/btnPrice"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -137,22 +137,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_write_recall"
-        android:id="@+id/button11"
-        android:layout_below="@+id/button9"
-        android:layout_alignLeft="@+id/button9"
-        android:layout_alignStart="@+id/button9"
-        android:layout_alignRight="@+id/button10"
-        android:layout_alignEnd="@+id/button10" />
+        android:id="@+id/btnWriteRecallProdInfo"
+        android:layout_below="@+id/btnDelProdInfo"
+        android:layout_alignLeft="@+id/btnDelProdInfo"
+        android:layout_alignStart="@+id/btnDelProdInfo"
+        android:layout_alignRight="@+id/btnAddProdIndo"
+        android:layout_alignEnd="@+id/btnAddProdIndo" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_analitics"
-        android:id="@+id/button12"
-        android:layout_below="@+id/button11"
+        android:id="@+id/btnAnaliticsProdInfo"
+        android:layout_below="@+id/btnWriteRecallProdInfo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button11"
-        android:layout_alignEnd="@+id/button11" />
+        android:layout_alignRight="@+id/btnWriteRecallProdInfo"
+        android:layout_alignEnd="@+id/btnWriteRecallProdInfo" />
 
 </RelativeLayout>

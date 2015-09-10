@@ -1,9 +1,15 @@
 package com.example.user.agregator;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class TutorialActivity extends AppCompatActivity {
 
@@ -11,6 +17,32 @@ public class TutorialActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+//        ViewPager vpTutorial = (ViewPager) findViewById(R.id.pa);
+/*        final RelativeLayout bg = (RelativeLayout)findViewById(R.id.tutorialLayout);
+        bg.setOnTouchListener(new */
+        final ImageView imgTutorial = (ImageView) findViewById(R.id.imageTutorial);
+        imgTutorial.setImageResource(R.drawable.eat1);
+        imgTutorial.setOnTouchListener(new OnSwipeTouchListener(TutorialActivity.this){
+            public void onSwipeTop() {
+                Toast.makeText(TutorialActivity.this, "top", Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeRight() {
+                Toast.makeText(TutorialActivity.this, "right", Toast.LENGTH_SHORT).show();
+                imgTutorial.setImageResource(R.drawable.eat1);
+            }
+            public void onSwipeLeft() {
+                Toast.makeText(TutorialActivity.this, "left", Toast.LENGTH_SHORT).show();
+                imgTutorial.setImageResource(R.drawable.eat2);
+            }
+            public void onSwipeBottom() {
+                Toast.makeText(TutorialActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+            }
+
+            public boolean onTouch(View v, MotionEvent event) {
+               // return gestureDetector.onTouchEvent(event);
+                return gestureDetector.onTouchEvent(event);
+            }
+        });
     }
 
     @Override
